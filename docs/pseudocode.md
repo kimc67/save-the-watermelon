@@ -9,7 +9,7 @@ def main_game_loop:
   while playing = yes:
     difficulty = input("choose difficulty")
     while difficulty is not easy, medium, or hard:
-      input("invalid input, please choose easy, medium, or hard")
+      difficulty = input("invalid input, please choose easy, medium, or hard")
     if difficulty = easy:
       words = easy word list
     elif difficulty = medium:
