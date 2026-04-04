@@ -44,6 +44,8 @@ def main_game_loop:
       if guess is in display_word:
         display f"{guess} has already been revealed"
         continue
+      elif guess is in incorrect
+        display f"you already guessed {guess}"
       elif guess is in secret:
         positions = [iterate secret with index i, if character is guess]
         for i in range length of positions:
