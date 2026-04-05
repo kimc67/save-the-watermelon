@@ -1,6 +1,12 @@
 import random
 
 def choose_difficulty():
+    """
+    Asks user to choose a difficulty
+    Checks if user enters valid inputs
+    Returns the difficultly lowercased
+    Similar to validate function
+    """
     difficulty = input("\nChoose a difficulty level (easy / medium / hard): ")
     while difficulty not in ["easy", "medium", "hard", "Easy", "Medium", "Hard"]:
         difficulty = input("Enter easy, medium, or hard: ")
@@ -14,6 +20,11 @@ def choose_difficulty():
         return "hard"
 
 def display_change(letter, word, display):
+    """
+    Checks the word for instances of the letter
+    Replaces an underscore for every match
+    Returns the display that reveals matches
+    """
     display_list = list(display)
     positions = [i for i, char in enumerate(word) if char == letter]
     for i in range(len(positions)):
@@ -22,15 +33,30 @@ def display_change(letter, word, display):
     return display
 
 def starting_display(word):
+    """
+    Converts a word to underscores
+    For long words, one random letter is revealed
+    """
     display = "_" * len(word)
     if len(word) > 5:
         display = display_change(random.choice(word), word, display)
     return display
 
 def art(slices):
+    """
+    Each slice will look like this:
+      /\
+     /,'\
+    (____)
+    Each line is multiplied by the number of slices
+    """
     print(f"\nYou have {slices} slices left.\n", r"  /\  " * slices, "\n", r" /,'\ " * slices, "\n", "(____)" * slices)
 
 def validate(letter_or_word,entry):
+    """
+    To validate a letter will check if the entry is an alphabet character
+    To validate a word will check if the entry is 'yes' or 'no'
+    """
     if letter_or_word == "letter":
         while True:
             if entry.isnumeric():
