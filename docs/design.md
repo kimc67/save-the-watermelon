@@ -33,7 +33,7 @@ It would be nice to have an aesthetically pleasing design for the watermelon sli
 9. If restart, steps 2-8 repeat
 
 ## Data design
-Depending on the number of difficulty levels I implement, words will be stored in the same amount of word lists as difficulty levels. These will be lists of strings. If I only do one difficulty, there will only be one word list. 
+Depending on the number of difficulty levels I implement, words will be stored in the same amount of word lists as difficulty levels. These will be lists of strings. 
 
 The random module will be used for the next steps. At the start of every game, a string is selected at random from a word list. This string will be displayed to the user as a string of underscores that represent each letter. Any string longer than five characters will have at least one letter revealed at random. To do this, a random character will be chosen from the word and then revealed in the masked word.
 
