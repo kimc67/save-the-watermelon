@@ -4,6 +4,8 @@ def choose_difficulty():
     difficulty = input("\nChoose a difficulty level (easy / medium / hard): ")
     while difficulty not in ["easy", "medium", "hard", "Easy", "Medium", "Hard"]:
         difficulty = input("Enter easy, medium, or hard: ")
+        if difficulty.isnumeric():
+            difficulty = input("That is a number. Enter easy, medium, or hard: ")
     if difficulty == "easy" or difficulty == "Easy":
         return "easy"
     elif difficulty == "medium" or difficulty == "Medium":
@@ -30,13 +32,21 @@ def art(slices):
 
 def validate(letter_or_word,entry):
     if letter_or_word == "letter":
-        while not entry.isalpha():
-            entry = input("Enter a letter (a-z or A-Z:")
-        while len(entry) != 1:
-            entry = input("Enter only one letter:")
+        while True:
+            if entry.isnumeric():
+                entry = input("That is a number. Enter a letter (a-z or A-Z): ")
+            elif not entry.isalpha():
+                entry = input("Enter a letter (a-z or A-Z): ")
+            elif len(entry) != 1:
+                entry = input("Enter only one letter: ")
+            else:
+                break
     if letter_or_word == "word":
-        while entry.lower() != "no" and entry.lower() != "yes":
-            entry = input("Enter yes or no: ")
-        while not entry.isalpha():
-            entry = input("Enter yes or no:")
+        while True:
+            if entry.isnumeric():
+                entry = input("That is a number. Enter yes or no: ")
+            elif entry.lower() != "no" and entry.lower() != "yes" or not entry.isalpha():
+                entry = input("Enter yes or no: ")
+            else:
+                break
     return entry.lower()
