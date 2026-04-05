@@ -10,3 +10,5 @@
 | any other character | invalid | invalid | invalid |
 | no input | invalid | invalid | invalid |
 | repeated guess | N/A | "Already guessed" | N/A |
+
+## Manual test transcript
