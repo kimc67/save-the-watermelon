@@ -35,10 +35,10 @@ def main_game_loop():
 
             # if user's guess has been revealed, no change in score
             if guess in display_word: 
-                print(f"'{guess}' has already been revealed.... Try again!")
+                print(f"'{guess}' has already been revealed and it is correct.... Try again!")
             # if user already made that guess and it's incorrect, no change in score
             elif guess in incorrect:
-                print(f"You already guessed '{guess}'. Try again!")
+                print(f"You already guessed '{guess}' and it is wrong. Try again!")
             # if guess was part of the secret word, the masked word updates to reveal it
             elif guess in secret:
                 display_word = l.display_change(guess, secret, display_word)
