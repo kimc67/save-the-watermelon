@@ -9,13 +9,16 @@ def main_game_loop():
           f"without losing all your watermelon slices. You will have {slices} slices to begin with. Each \n"
           "incorrect choice will destroy one slice, so be careful!")
 
+    # this will loop through every game
     while playing == "yes":
-        difficulty = l.choose_difficulty()
-        incorrect = []
+        difficulty = l.choose_difficulty() # take input and validate
+        incorrect = [] # list of user's incorrect guesses
 
-        secret = random.choice(w.word_list(difficulty))
-        display_word = l.starting_display(secret)
+        # takes a random word from the word list corresponding to the established difficulty
+        secret = random.choice(w.word_list(difficulty)) 
+        display_word = l.starting_display(secret) # starting display will have masked let      
 
+        # this will loop through every user guess
         while slices > 0:
             if "_" not in display_word:
                 print(f"\nCongratulations! You guessed the word: '{secret}'")
