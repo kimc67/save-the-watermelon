@@ -13,5 +13,7 @@ print(l.starting_display("applesauce"))
 l.art(30)
 
 # 'word' in 1st parameter will validate 'yes' or 'no' in 2nd parameter
-# 'letter' in 1st parameter will validate an alphabet character in 2nd parameter
 print(l.validate("word","yes"))
+
+# 'letter' in 1st parameter will validate an alphabet character in 2nd parameter
+print(l.validate("letter", "N"))
