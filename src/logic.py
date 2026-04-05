@@ -1,7 +1,7 @@
 import random
 
 def choose_difficulty():
-    difficulty = input("\nChoose a difficulty level (easy / medium / hard):")
+    difficulty = input("\nChoose a difficulty level (easy / medium / hard): ")
     while difficulty not in ["easy", "medium", "hard", "Easy", "Medium", "Hard"]:
         difficulty = input("Enter easy, medium, or hard: ")
     if difficulty == "easy" or difficulty == "Easy":
@@ -31,12 +31,12 @@ def art(slices):
 def validate(letter_or_word,entry):
     if letter_or_word == "letter":
         while not entry.isalpha():
-            entry = input("Enter a letter:")
+            entry = input("Enter a letter (a-z or A-Z:")
         while len(entry) != 1:
             entry = input("Enter only one letter:")
     if letter_or_word == "word":
         while entry.lower() != "no" and entry.lower() != "yes":
             entry = input("Enter yes or no: ")
         while not entry.isalpha():
-            entry = input("Enter a yes or no:")
+            entry = input("Enter yes or no:")
     return entry.lower()
