@@ -9,7 +9,4 @@
 | alphabet character | invalid | valid | invalid |
 | any other character | invalid | invalid | invalid |
 | no input | invalid | invalid | invalid |
-
-### Other inputs
-| Input | Result |
-| Repeat inputs in make a guess | "
+| repeated guess | N/A | "Already guessed" | N/A |
