@@ -1,6 +1,6 @@
 # Test Plan
 
-
+## Test matrix
 | Input | Choosing difficulty | Make a guess | Continuing? |
 | -------- | -------- | -------- | -------- |
 | easy/medium/hard | valid | invalid | invalid |
@@ -10,3 +10,6 @@
 | any other character | invalid | invalid | invalid |
 | no input | invalid | invalid | invalid |
 
+### Other inputs
+| Input | Result |
+| Repeat inputs in make a guess | "
