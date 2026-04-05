@@ -52,7 +52,7 @@ def main_game_loop():
 
         # lose condition
         if slices == 0:
-            print("You lost...")
+            print(f"You lost... The word was '{secret}'.")
 
         # validates and converts user's yes or no input to lowercase
         playing = l.validate("word", input("Would you like to play again? (yes/no): "))
