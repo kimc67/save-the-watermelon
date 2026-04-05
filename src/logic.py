@@ -22,7 +22,7 @@ def display_change(letter, word, display):
 def starting_display(word):
     display = "_" * len(word)
     if len(word) > 5:
-        display_change(random.choice(word), word, display)
+        display = display_change(random.choice(word), word, display)
     return display
 
 def art(slices):
