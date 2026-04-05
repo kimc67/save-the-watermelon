@@ -4,9 +4,9 @@ import logic as l
 
 def main_game_loop():
     playing = "yes"
-    slices = 10
+    max_slices = 10
     print("Welcome to the Save the Watermelon! In this game, you will try to guess the hidden word \n"
-          f"without losing all your watermelon slices. You will have {slices} slices to begin with. Each \n"
+          f"without losing all your watermelon slices. You will have {max_slices} slices to begin with. Each \n"
           "incorrect choice will destroy one slice, so be careful!")
 
     # this will loop through every word until user does not want to play anymore
@@ -14,6 +14,7 @@ def main_game_loop():
         
         difficulty = l.choose_difficulty() # take input and validate
         incorrect = [] # list of user's incorrect guesses
+        slices = max_slices
 
         # takes a random word from the word list corresponding to the established difficulty
         secret = random.choice(w.word_list(difficulty)) 
