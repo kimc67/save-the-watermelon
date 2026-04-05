@@ -37,7 +37,7 @@ Depending on the number of difficulty levels I implement, words will be stored i
 
 The random module will be used for the next steps. At the start of every game, a string is selected at random from a word list. This string will be displayed to the user as a string of underscores that represent each letter. Any string longer than five characters will have at least one letter revealed at random. To do this, a random character will be chosen from the word and then revealed in the masked word.
 
-If the player guesses a correct letter, the underscores that represented that letter will be replaced by the correct letter. If they guess a wrong letter, their slice counter, will decrease by one. Since it is ASCII art, the string corresponding to the slice count will be updated to match the current slice count. 
+If the player guesses a correct letter, the underscores that represented that letter will be replaced by the correct letter. The string of the masked word that is displayed to the user will store any correct and revealed guesses. If they guess a wrong letter, their slice counter, will decrease by one. Incorrect guesses will be stored in a list. Since I use ASCII art, the string corresponding to the slice count will be updated to match the current slice count. 
 
 ## Module/function responsibility
 The logic module will contain all the functions I described above. The words module will include the word list(s) that I will implement in the game. These modules will be imported into the game module, which will have the menu loop, gameplay loop, and takes in inputs. They will be stored in the src package. The only other module used will be the random module. 
